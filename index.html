@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="text/javascript" defer></script>
+    <title>Profile</title>
+</head>
+<body class="background-cyan">
+    <div id="container" class="background-cyan">
+        <div id="switch-container1">
+            <div id="switch-container2">
+                <input type="checkbox" id="toggle-switch">
+                <label for="toggle-switch" id="switch-label" class="font-black">Light Mode</label>
+            </div>
+        </div>
+        <h1 class="font-white">Profile</h1>
+        <div id="card" class="background-white">
+            <div id="banner1" class="background-banner-blue">
+                <div id="profile-image-container" class="background-white">
+                    <img src="images/me.jpg" alt="Profile Picture">
+                </div> 
+            </div>
+            <div id="text">
+                <div id="header">
+                    <div id="name" class="font-black">
+                        James Thompson
+                    </div>
+                    <div id="age" class="font-grey">
+                        28
+                    </div>
+                </div> 
+                <div id="city" class="font-black">
+                    London
+                </div>
+                <div id="header1">
+                    <div id="name1" class="font-black">
+                        Name: James Thompson
+                    </div>
+                    <div id="age1" class="font-grey">
+                        Age: 28
+                    </div>
+                    <div id="city1" class="font-black">
+                        Location: London
+                    </div>
+                </div> 
+                
+                <button id="see-more" class="btn font-white background-banner-blue">
+                    See More
+                </button>
+                <div id="additional-info" class="font-black">
+                    <p>
+                        I started learning to code in February 2022. Initially, I wanted to learn
+                        how to code because I wanted to build a website for the company I started 
+                        (called Imperium Learning). I began by learning the basics of Python, since
+                        I'd read online that Python had the easiest syntax for beginners to understand and 
+                        that there was a lot of free information to help me if I got stuck on a problem.  
+                    </p>
+                    <p>
+                        This experience in Python led to me being accepted into a frontend web development
+                        bootcamp run by Bath Spa University. So far, I have covered the basics of HTML, CSS 
+                        and JavaScript. 
+                    </p>
+                    <h3>3 Interesting Facts About Me</h3>
+                    <ol>
+                        <li>I support Chelsea F.C.</li>
+                        <li>I adopted my neighbour's cat (my neighbour wasn't happy about it!)</li>
+                        <li>I've been skydiving</li>
+                    </ol>
+                    <button id="see-less" class="btn font-white background-banner-blue">
+                        See Less
+                    </button>
+
+                </div>
+                <div id="platforms">
+                    <a href="https://www.twitter.com/imperiumlearn"><div class="fa-brands fa-twitter font-banner-blue"></div></a>
+                    <a href="https://www.youtube.com/c/imperiumlearning"><div class="fa-brands fa-youtube font-banner-blue"></div></a>
+                    <a href="https://www.udemy.com/user/imperium-learning/"><div class="fa-solid fa-u font-banner-blue"></div></a>
+                </div>
+            </div>
+        </div>
+        <div id="quiz" class="background-white">
+            <div id="quiz1" class="font-black">
+                <h2> <span style="color: green">True</span> or <span style="color: red">False</span>?</h2>
+                <p>If you read the expanded version of my profile, you may have seen the section titled
+                   '3 Interesting Facts About Me'. What I neglected to mention was that, potentially, all 3
+                   of these supposed facts are false. Take this quiz to see if you're good at spotting lies. 
+                </p>
+                <form id="form">
+                    <p>I support Chelsea F.C.</p>
+                    <div class="answers">
+                        <div class="answers-true">
+                            <input type="radio" id="true1" name="support_question">
+                            <label for="true1">True</label>
+                        </div>
+                        <div class="answers-false">
+                            <input type="radio" id="false1" name="support_question">
+                            <label for="false1">False</label>
+                        </div>
+                    </div>
+                    <p>I adopted my neighbour's cat.</p>
+                    <div class="answers">
+                        <div class="answers-true">
+                            <input type="radio" id="true2" name="cat_question">
+                            <label for="true2">True</label>
+                        </div>
+                        <div class="answers-false">
+                            <input type="radio" id="false2" name="cat_question">
+                            <label for="false2">False</label>
+                        </div>  
+                    </div>
+                    <p>I've been skydiving.</p>
+                    <div class="answers">
+                        <div class="answers-true">
+                            <input type="radio" id="true3" name="sky_question">
+                            <label for="true3">True</label>
+                        </div>
+                        <div class="answers-false">
+                            <input type="radio" id="false3" name="sky_question">
+                            <label for="false3">False</label>
+                        </div>
+                    </div>
+                    <button class="btn font-white background-banner-blue" id="quiz-submit">Submit</button>
+                </form> 
+            </div>
+            <div id="quiz-results" class="background-white">
+                <div id="correct-answers" class="quiz-results-box font-white background-banner-blue">
+                    
+                </div>
+                <div id="wrong-answers" class="quiz-results-box font-white background-banner-blue">
+                    
+                </div>
+                <div id="clarify-answers" class="quiz-results-box font-white background-banner-blue">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

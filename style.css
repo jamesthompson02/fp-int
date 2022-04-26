@@ -1,0 +1,379 @@
+@import url(https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+
+@media screen and (min-width: 0px) {
+    :root {
+        --very-dark-blue: hsl(233, 47%, 7%);
+        --dark-blue: hsl(244, 38%, 16%);
+        --border-radius: 15px;
+        --soft-violet: hsl(277, 64%, 61%);
+        --dark-cyan: hsl(185, 75%, 39%);
+        --banner-blue: #3fd1d6;
+    }
+    body {
+        margin: 0px;
+        
+    }
+    #container {
+        width: 100vw;
+        min-height: 150vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+        position: relative;
+        
+    }
+    #switch-container1 {
+        position: absolute;
+        top: 10px;
+        right: 40px;
+    }
+    #switch-container2 {
+        position: relative;
+        height: 3.5em;
+    }
+    #switch-label {
+        font-family: 'Inter';
+        font-size: 1.2rem;
+        /* color: black; */
+    }
+    #toggle-switch {
+        opacity: 0;
+        position: absolute;
+        right: 0em;
+        top: 0em;
+    }
+    #toggle-switch + label {
+        display: flex;
+        align-items: center;
+    }
+    #toggle-switch + label::before {
+        content: '';
+        width: 4em;
+        height: 2em;
+        background-color: lightgray;
+        border-radius: var(--border-radius);
+        margin-right: 0.25em;
+        cursor: pointer;
+        transition: 0.9s ease-in-out;
+    }
+    #toggle-switch:checked + label::before {
+        background-color: darkblue;       
+    }
+    #toggle-switch + label::after {
+        content: '';
+        width: 2em;
+        height: 2em;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: 0px;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+    #toggle-switch:checked + label::after {
+        transform: translateX(2em);
+    }
+    #container h1 {
+        font-family: 'Lexend Deca';
+        /* color: white; */
+        text-decoration: underline;
+    }
+    #card {
+        width: 540px;
+        height: 610px;
+        display: flex;
+        flex-direction: column;
+        /* background-color: white; */
+        border-radius: var(--border-radius);
+    }
+    #banner1 {
+        width: 100%;
+        height: 260px;
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        /* background-color: var(--banner-blue); */
+        display: flex;
+        justify-content: center;
+    }
+    #text {
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(150px);
+        
+    }
+    #profile-image-container {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        /* background-color: white; */
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        transform: translateY(120px);
+    }
+    #banner1 img {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+    }
+    
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 45%;
+        margin-top: 10px;
+    }
+    #header #name {
+        font-family: 'Lexend Deca';
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    #header #age {
+        font-family: 'Lexend Deca';
+        font-size: 1.4rem;
+        /* color: grey; */
+    }
+    #header1 {
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 81%;
+        margin-top: 20px;
+    }
+    #header1 #name1 {
+        font-family: 'Lexend Deca';
+        font-size: 1.4rem;
+        font-weight: 700;
+        
+    }
+    #header1 #age1 {
+        font-family: 'Lexend Deca';
+        font-size: 1.4rem;
+        /* color: grey; */
+    }
+    #city {
+        font-family: 'Lexend Deca';
+        font-size: 1.2rem;    
+    }
+    #city1 {
+        font-family: 'Lexend Deca';
+        font-size: 1.2rem;
+    }
+    .btn {
+        width: 150px;
+        height: 50px;
+        border-radius: 30px;
+        /* background-color: var(--banner-blue); */
+        border: none;
+        /* color: white; */
+        font-family: 'Lexend Deca';
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+    
+    .btn:hover {
+        cursor: pointer;
+        border: 3px solid var(--banner-blue);
+        background-color: white;
+        color: var(--banner-blue);
+    }
+    #additional-info {
+        display: none;
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+        margin-top: 10px;
+    }
+    #additional-info p,
+    #additional-info h6,
+    #additional-info li {
+        width: 90%;
+        font-family: 'Inter';
+    }
+    #platforms {
+        width: 80%;
+        height: 40px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-top: 2px solid grey;
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+    /* #platforms .fa-brands,
+    #platforms .fa-solid {
+        color: var(--banner-blue); 
+    } */
+    #quiz {
+        width: 540px;
+        /* background-color: white; */
+        margin-top: 50px;
+        border-radius: var(--border-radius);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #quiz1 {
+        width: 100%;
+        height: 565px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #quiz1 h2 {
+        font-family: 'Lexend Deca';
+    }
+    #quiz1 p {
+        width: 90%;
+        font-family: 'Inter';
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    #form {
+        width: 90%;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;   
+    }
+    #form .answers {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Inter';
+        width: 30%;
+    }
+    .answers-true {
+        display: flex;
+    }
+    .answers-false {
+        display: flex;
+    }
+    #quiz-results {
+        width: 100%;
+        font-family: 'Inter';
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 0px;
+        border-radius: var(--border-radius);
+    }
+    .quiz-results-box {
+        width: 90%;
+        text-align: center;
+        /* color: white;
+        background-color: var(--banner-blue); */
+        border-radius: var(--border-radius);
+        margin: 10px 0px;
+    }
+    .background-cyan {
+        background-color: var(--dark-cyan);
+    }
+    .background-banner-blue {
+        background-color: var(--banner-blue);
+    }
+    .background-white {
+        background-color: white;
+    }
+    .font-white {
+        color: white;
+    }
+    .font-banner-blue {
+        color: var(--banner-blue);
+    }
+    .font-black {
+        color: black;
+    }
+    .font-grey {
+        color: grey;
+    }
+
+    .dark-background-1 {
+        background-color: var(--very-dark-blue);
+    }
+    .dark-background-2 {
+        background-color: var(--dark-blue);
+    }
+    .dark-background-3 {
+        background-color: rgb(100, 100, 100);
+    }
+    .font-dark-grey {
+        color: rgb(41, 41, 41);
+    }
+    .font-dark-blue {
+        color: var(--dark-blue);
+    }
+    .font-grey1 {
+        color: grey;
+    }
+}
+@media screen and (min-width: 992px) {
+    #card {
+        width: 990px;
+        height: 610px;
+        display: flex;
+        flex-direction: row;
+    }
+    #banner1 {
+        width: 40%;
+        height: 100%;
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+        border-top-right-radius: 0px;
+        /* background-color: var(--banner-blue); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #text {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(0px);
+        
+    }
+    #profile-image-container {
+        width: 390px;
+        height: 390px;
+        border-radius: 50%;
+        /* background-color: white; */
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        transform: translateY(0px);
+    }
+    #banner1 img {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+    }
+    #header {
+        display: none;
+    }
+    #city {
+        display: none;
+    }
+    #header1 {
+        display: flex;
+    }
+    
+    #see-more {
+        display: none;
+    }
+    #see-less {
+        display: none;
+    }
+    #additional-info {
+        display: flex;
+    }
+
+}
